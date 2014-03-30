@@ -48,10 +48,21 @@ gem "mongoid" ,'4.0.0.alpha2'
 
 gem 'thin'
 
+<<<<<<< HEAD
 group :development, :test do
     gem 'rspec-rails', '2.13.1'
 end
 group :test do
     gem 'selenium-webdriver', '2.35.1'
     gem 'capybara', '2.1.0'
+=======
+group :test do
+  gem 'selenium-webdriver', '2.35.1'
+  gem 'capybara', '2.1.0'
+  gem 'database_cleaner'
+end
+
+group :development, :test do
+  gem 'rspec-rails', '2.13.1'
+>>>>>>> static-pages
 end

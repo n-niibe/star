@@ -22,12 +22,20 @@ RSpec.configure do |config|
   # config.mock_with :rr
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
+<<<<<<< HEAD
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
+=======
+  # config.fixture_path = "#{::Rails.root}/spec/fixtures"
+>>>>>>> static-pages
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
+<<<<<<< HEAD
   config.use_transactional_fixtures = true
+=======
+  # config.use_transactional_fixtures = true
+>>>>>>> static-pages
 
   # If true, the base class of anonymous controllers will be inferred
   # automatically. This will be the default behavior in future versions of
@@ -39,4 +47,19 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+<<<<<<< HEAD
+=======
+  config.before(:suite) do
+    DatabaseCleaner[:mongoid].strategy = :truncation
+  end
+
+  config.before(:each) do
+    DatabaseCleaner[:mongoid].start
+  end
+
+  config.after(:each) do
+    DatabaseCleaner[:mongoid].clean
+  end
+  config.include Capybara::DSL
+>>>>>>> static-pages
 end

@@ -1,6 +1,12 @@
 Star::Application.routes.draw do
+<<<<<<< HEAD
   resources :microposts
 
+=======
+  get "static_pages/home"
+  get "static_pages/help"
+  get "static_pages/about"
+>>>>>>> static-pages
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
